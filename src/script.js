@@ -19,6 +19,8 @@ startButton.addEventListener("click", () => {
 
     textArea.classList.add("custom-text-area");
     textArea.setAttribute("id", "inputArea");
+    textArea.setAttribute("rows", "");
+    textArea.style.resize = "none";
     container.appendChild(textArea);
 
     guessButton.classList.add("btn");
@@ -41,8 +43,7 @@ function checker(input) {
     set = "success";
   }
 }
-
-guessButton.addEventListener("click", () => {
+function work() {
   let inputValue = textArea.value;
   textArea.value = "";
   checker(inputValue);
@@ -53,4 +54,13 @@ guessButton.addEventListener("click", () => {
     count = 0
     flag = "0"
   }
+}
+textArea.addEventListener("keydown",(e)=>{
+  if (e.key === "Enter") {
+    e.preventDefault();
+    work();
+  }
+})
+guessButton.addEventListener("click", ()=>{
+  work();
 });
