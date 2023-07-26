@@ -14,6 +14,7 @@ startButton.addEventListener("click", () => {
   if (flag == 0) {
     randomNumber = Math.floor(Math.random() * 100) + 1;
     progress.style.display = "block";
+    progress.innerHTML = "Here We Go Again"
     container.classList.add("contain");
     document.body.appendChild(container);
 
