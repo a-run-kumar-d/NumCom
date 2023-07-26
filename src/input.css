@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .btn-com{
+      @apply h-10 w-48 bg-indigo-600 mt-4 rounded-md text-slate-100 text-lg font-semibold;
+    }
+  }
